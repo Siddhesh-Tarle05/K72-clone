@@ -1,0 +1,495 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  ;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  
+}
+
+body {
+  overflow-x: hidden;
+
+}
+
+/* ===== Home Page===== */
+
+.VidContainer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.Videodiv {
+  width: 100%;
+  height: 100%;
+}
+
+.Videodiv .vid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.TextContainer {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.UpperText {
+  color: white;
+  font-size: 10vw;
+  text-transform: uppercase;
+  line-height: 0.9;
+  text-align: center;
+}
+
+.FontVid {
+  /* width: 16vw; */
+  height: 8vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.FontVidDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BottomText {
+  margin-bottom: 1rem;
+  font-size: 7vw;
+  text-transform: uppercase;
+  /* line-height: 1; */
+  text-align: center;
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.Bottomlinks {
+  color: white;
+  text-decoration: none;
+  border: 4px solid white;
+  border-radius: 9999px;
+  line-height: 0.9;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 5px;
+  font-weight: 500;
+}
+
+.Bottomlinks:hover {
+  border: 3px solid #D3FD50;
+  color: #D3FD50;
+
+}
+
+/* ===== Agence Page===== */
+
+.Parent {
+  width: 100vw;
+  height: 100vh;
+}
+
+.stairs,.planes {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  overflow: hidden;
+}
+
+.stair,.plane {
+  width: 20%;
+ height: 100%;
+  background-color: black;
+}
+
+.AppDiv {
+  width: 100%;
+  height: 100%;
+
+}
+
+.AgenceText {
+  width: 100%;
+  height: 100%;
+}
+
+
+.AgenceHeading {
+  font-size: 22rem;
+  text-align: center;
+  font-weight: 500;
+  line-height: 0.8;
+
+z-index: 200;
+}
+
+.AgenceText {
+  position: absolute;
+  top: 50%;
+}
+
+.imgContainer {
+  /* position: absolute; */
+  margin-top: 20rem;
+  margin-left: 30rem;
+  /* top: 30%;
+  left: 27%; */
+  /* background-color: rgb(195, 34, 34); */
+  width: 16rem;
+  height: 21rem;
+}
+
+.AgencePara {
+  font-size: 3.5vw;
+  line-height: 1;
+  font-weight: 500;
+
+}
+
+.right {
+  background-color: black;
+  width: 17rem;
+  height: 3.5rem;
+position: absolute;
+z-index: 500;
+right: 0;
+}
+
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  /* width: 100%; */
+}
+
+.left {
+  padding-top: 0.5rem;
+}
+
+.NavbarParent {
+  position: absolute;
+  z-index: 400;
+  width: 100vw;
+
+}
+
+.greenMenu {
+  width: 17rem;
+  height: 0rem;
+  background-color: #D3FD50;
+  transition: all ease 0.15s;
+
+}
+
+.right:hover {
+  .greenMenu {
+    height: 3.5rem;
+  }
+}
+
+.navLine {
+  position: relative;
+
+  width: 100%;
+  height: 11rem;
+  overflow: hidden;
+
+}
+
+.work {
+  font-size: 9rem;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 2rem;
+  line-height: 0.8;
+  border-top: 1px solid gray;
+}
+
+.Agency {
+  font-size: 9rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 0.8;
+  border-top: 1px solid gray;
+}
+
+.Blog {
+  font-size: 9rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 0.9;
+  border-bottom: 2px solid gray;
+  border-top: 1px solid gray;
+
+}
+
+.hovernav {
+  display: flex;
+  align-items: center;
+  font-size: 4.5rem;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+.hovernav img {
+  width: 12rem;
+  height: 5rem;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 9999px;
+
+}
+
+.hovernav h1 {
+  white-space: nowrap;
+}
+
+
+
+.hovernav {
+  animation: navAnimation 8s linear 0s infinite;
+
+}
+
+.pa {
+  display: flex;
+  gap: 0;
+  position: absolute;
+  top: 0%;
+  background-color: #D3FD50;
+  display: none;
+
+}
+
+.navLine:hover {
+  .pa {
+    display: flex;
+  }
+}
+
+@keyframes navAnimation {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.FullNavbarParent {
+  /* background-color: black; */
+  color: white;
+  width: 100%;
+  height: 100%;
+ z-index: 1000;
+ position: absolute;
+display: none;
+}
+
+.navLineParent{
+ z-index: 7000;
+ position: relative;
+}
+.ri-close-fill {
+  color: white;
+  font-size: 5rem;
+}
+.planes{
+   z-index: 1000;
+}
+
+.iconSection {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.5rem;
+}
+.WorkHeadingDiv{
+  padding-top: 22rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+.AllWorks{
+   padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+.WorkHeading{
+  font-size: 13rem;
+  font-weight: 500;
+}
+
+.WorkLine{
+  width: 100%;
+  height: 700px;
+margin-bottom: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.WorkLeft{
+  width: 49%;
+  /* height: 400px; */
+ position: relative;
+}
+.WorkRight{
+  width: 50%;
+  
+ position: relative;
+}
+
+.WorkCard{
+overflow: hidden;
+ transition: all ease 0.2s;
+ /* height: 700px; */
+ /* margin-top: 1rem;
+ margin-bottom: 1rem; */
+}
+.WorkCard:hover{
+  border-radius: 50px;
+}
+
+.WorkImg{
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+.WorkCardText{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+ 
+  opacity: 0;
+}
+.WorkCardText h2{
+  color: white;
+  border: 1px solid white;
+  border-radius: 9999px;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 3rem;
+}
+.WorkLeft:hover .WorkCardText {
+  opacity: 1;
+   background-color: rgba(0, 0, 0, 0.548);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.WorkRight:hover .WorkCardText{
+  opacity: 1;
+   background-color: rgba(0, 0, 0, 0.548);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HeroParaBox{
+ 
+ display: flex;
+ justify-content: end;
+ text-transform: lowercase;
+ text-align: start;
+ font-weight: 500;
+ line-height: 1.2;
+}
+.HeroPara{
+  font-size: 1rem;
+ width: 13rem;
+}
+.AgencePara{
+  width: 55%;
+  margin-left: 45rem;
+  margin-top: 2rem;
+}
+.imgContainerImg{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media (max-width: 768px) {
+.right{
+  width: 12rem;
+}
+.UpperText{
+  margin-top: 18rem;
+  font-size: 3rem;
+}
+.HeroParaBox{
+  margin-left: 7.5rem;
+ margin-top: 2rem;
+ width: 15rem;
+}
+.HeroPara{
+  font-size: 0.8rem;
+}
+.navLine{
+ height: 4rem;
+}
+.work,.Agency,.Blog{
+  font-size: 4rem;
+ 
+}
+.work{
+  margin-top: 0;
+}
+.navLinesparent{
+  margin-top: 7rem;
+}
+.WorkHeadingDiv{
+ padding-top: 19rem;
+}
+.WorkHeading{
+  font-size: 4rem;
+}
+.WorkLine{
+  flex-direction: column;
+  height: 500px;
+  width: 45rem;
+}
+.AgenceText{
+  top: 30%;
+}
+.AgenceHeading{
+  font-size: 4rem;
+  margin-bottom: 5rem;
+}
+.AgencePara{
+  width: 100%;
+  margin-left: 0;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.imgContainer{
+  margin-top: 0;
+  margin-left: 3rem;
+}
+.imgContainerImg{
+  width: 10rem;
+  height: 12rem;
+}
+}
